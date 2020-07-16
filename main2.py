@@ -3,11 +3,26 @@ import functions
 import foodList
 from foodList import ingredients
 
-
+new = []
 for i in range(len(ingredients)):
-    print([i] + sorted(ingredients[i].keys()))
-    
+    new += sorted(ingredients[i].keys())
 
+new_s = sorted(new)
+
+for i in new_s:
+    print(f"{i}. {i.title()}")
+
+
+# def listToString(ingredients):  
+    
+#     # initialize an empty string 
+#     str1 = " " 
+    
+#     # return string   
+#     return (str1.join(ingredients)) 
+        
+# # Driver code     
+# print(listToString(ingredients)) 
 
 # print(ingredients.keys())
 

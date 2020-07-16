@@ -8,7 +8,7 @@ ingredients = [
         "arugula"]
     },
     {
-        "herbs_andspices" : [
+        "herbs and spices" : [
         "salt - sea", "black pepper - cracked", "kaffir lime leaf", "turmeric - powder", "sugar",
         "pepper flakes - red", "paprika powder - smoked", "cumin - ground",
         "onion powder - dried", "garlic powder - dried", "basil", "coriander/cilantro",
@@ -38,7 +38,7 @@ ingredients = [
     },
 
     {
-        "animal_products" : [
+        "animal products" : [
         "smoked salmon", "egg/s", "beef - steak", "beef - ground", "chicken - ground",
         "bacon"
         ]
@@ -51,13 +51,13 @@ ingredients = [
     },
 
     {
-        "Nuts_and_toppings" : [
+        "nuts and toppings" : [
         "nutritional yeast", "cashews - raw", "almonds"
         ]
     },
 
     {
-        "asian_cooking" : [
+        "asian cooking" : [
         "wonton wrappers", "tempeh"
         ]
     }

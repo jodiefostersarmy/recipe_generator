@@ -1,6 +1,6 @@
 recipes = [
     {
-        "name": "Roasted Rainbow Potatoes",
+        "name": "roasted rainbow potatoes",
         "diet": ["Whole 30", "plant-based"],
         "ingredients": ["1 medium sweet potato", "4 red baby potatoes",
 "4 gold baby potatoes", "2 tablespoons avocado oil",
