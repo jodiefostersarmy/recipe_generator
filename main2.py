@@ -9,9 +9,8 @@ for i in range(len(ingredients)):
 
 new_s = sorted(new)
 
-for i in new_s:
-    print(f"{i}. {i.title()}")
-
+for count, item in enumerate(new_s, 1):
+  print(f"{count}. {item.title()}")
 
 # def listToString(ingredients):  
     
