@@ -4,41 +4,8 @@ from foodList import ingredients
 from functions import select_items
 
 
-print("""Welcome to...
+functions.greeting()
 
-'########:::::'###::::'##::: ##:'########:'########::'##:::'##:
- ##.... ##:::'## ##::: ###:: ##:... ##..:: ##.... ##:. ##:'##::
- ##:::: ##::'##:. ##:: ####: ##:::: ##:::: ##:::: ##::. ####:::
- ########::'##:::. ##: ## ## ##:::: ##:::: ########::::. ##::::
- ##.....::: #########: ##. ####:::: ##:::: ##.. ##:::::: ##::::
- ##:::::::: ##.... ##: ##:. ###:::: ##:::: ##::. ##::::: ##::::
- ##:::::::: ##:::: ##: ##::. ##:::: ##:::: ##:::. ##:::: ##::::
-..:::::::::..:::::..::..::::..:::::..:::::..:::::..:::::..:::::
-
-
-This application will provide you with suggested recipes for diets 
-that follow the Whole30, vegetarian or plant-based diets based on the
-ingredients that you have in your fridge and pantry.
-
-We aim to match the recipes closest to the ingredients that you already 
-have on hand, and provide you with a quick and easy way to prepare a 
-healthy and tasty meal.
-
-We begin by asking you everything that you have in your pantry that you 
-would like to use, then once we have all the ingredients, we will provide 
-you with a selection of recipes across the diets mentioned above.
-You will be able to select the best fitting option based on taste, cook time
-and diet.
-
-We recommend that you provide the application with at least 3 ingredients to 
-maximise its benefit.
-
-If you need any help, or more instructions, call the help flag with --help
-""")
-print("\n\n")
-print("""To find the best recipes for your dietary preference, we will need to add a few ingredients you have on hand.
-Or, alternatively you can also browse the full list of recipes we have in the database.
-""")
 
 # begin = functions.askUser("""1. I have some ingredients to use.
 # 2. Let me see the full list!
