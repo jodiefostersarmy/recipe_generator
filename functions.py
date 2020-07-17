@@ -1,21 +1,22 @@
 import recipes
 from foodList import ingredients
-
+from termcolor import colored, cprint
 
 def greeting():
-    print("""Welcome to...
+    cprint("""
+                                 d8P                     
+                              d888888P                   
+?88,.d88b, d888b8b    88bd88b   ?88'    88bd88b?88   d8P 
+`?88'  ?88d8P' ?88    88P' ?8b  88P     88P'  `d88   88  
+  88b  d8P88b  ,88b  d88   88P  88b    d88     ?8(  d88  
+  888888P'`?88P'`88bd88'   88b  `?8b  d88'     `?88P'?8b 
+  88P'                                                )88
+ d88                                                 ,d8P
+ ?8P                                              `?888P' 
+ ========================================================
+""", 'white')
 
-'########:::::'###::::'##::: ##:'########:'########::'##:::'##:
- ##.... ##:::'## ##::: ###:: ##:... ##..:: ##.... ##:. ##:'##::
- ##:::: ##::'##:. ##:: ####: ##:::: ##:::: ##:::: ##::. ####:::
- ########::'##:::. ##: ## ## ##:::: ##:::: ########::::. ##::::
- ##.....::: #########: ##. ####:::: ##:::: ##.. ##:::::: ##::::
- ##:::::::: ##.... ##: ##:. ###:::: ##:::: ##::. ##::::: ##::::
- ##:::::::: ##:::: ##: ##::. ##:::: ##:::: ##:::. ##:::: ##::::
-..:::::::::..:::::..::..::::..:::::..:::::..:::::..:::::..:::::
-
-
-This application will provide you with suggested recipes for diets 
+    cprint("""This application will provide you with suggested recipes for diets 
 that follow the Whole30, vegetarian or plant-based diets based on the
 ingredients that you have in your fridge and pantry.
 
@@ -33,7 +34,7 @@ We recommend that you provide the application with at least 3 ingredients to
 maximise its benefit.
 
 If you need any help, or more instructions, call the help flag with --help
-""")
+""", 'white')
 
 
 def askUser(prompt):
@@ -122,14 +123,19 @@ Selection: """)
 Selection: """)
 
         userIngredients.sort()
+    
+    # if cont == 2:
+
+
     print("\nThe ingredients in your 'PANTRY' are:\n")
     for count,ingredient in enumerate(userIngredients,1):
         print(f"{count}. {ingredient.title()}")
+    
     return userIngredients
 
 
 def check():
-    print("For ")
+    print("")
 
 
 
