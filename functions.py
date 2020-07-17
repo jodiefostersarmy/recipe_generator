@@ -63,7 +63,7 @@ Or, alternatively you can also browse the full list of recipes we have in the da
 
 Selection: """)
     while yes_or_no > 2:
-        yes_or_no = askUser("""Sorry, you will need to enter only numbers beside options.
+        yes_or_no = askUser("""You will need to enter either 1 or 2.
         
     1. I have ingredients to use.
     2. Let me see the full recipe list!
@@ -98,7 +98,7 @@ def select_items():
             # Cat is not an ingredient, it is the name of the category
             if key != "cat":
                 print(f" {key} - {ingredients[cat][key].title()}")  
-            # print(ingredients[cat][key])
+            
 
 
         item = askUser("Selection: ")
@@ -107,7 +107,7 @@ def select_items():
             for key in ingredients[cat]:
                 if key != "cat":
                     print(f"{key} - {ingredients[cat][key].title()}")
-            item = askUser("""\nYou will need to enter only numbers beside the options.
+            item = askUser(f"""\nYou will need to enter numbers between 1 - {len(ingredients[cat])-1}
 Selection: """)
 
         userIngredients.append(ingredients[cat][item])
@@ -117,7 +117,7 @@ Selection: """)
 2 - NO
 Selection: """)
         if cont > 2:
-            cont = askUser("""\nSorry, you will need to enter only numbers beside options.
+            cont = askUser("""\nSorry, you will need select 1 or 2.
 1 - YES
 2 - NO
 Selection: """)
@@ -131,11 +131,14 @@ Selection: """)
     for count,ingredient in enumerate(userIngredients,1):
         print(f"{count}. {ingredient.title()}")
     
-    return userIngredients
+    return check()
 
 
 def check():
-    print("")
+    checking = askUser("""Is this correct?
+1 - Yes
+2 -No
+""")
 
 
 
