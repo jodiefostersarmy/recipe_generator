@@ -1,5 +1,5 @@
 import recipes
-from foodList2 import ingredients
+from foodList import ingredients
 
 
 def greeting():
@@ -88,7 +88,7 @@ def select_items():
             print('{:>14}'.format(f"{key} -  ") + '{:<0}'.format(ingredients[key]['cat'].title()))
         
 
-        cat = int(input("\nEnter category number: "))
+        cat = int(askUser("\nEnter category number: "))
 
         print(ingredients[cat]["cat"].title())
         
@@ -100,18 +100,36 @@ def select_items():
             # print(ingredients[cat][key])
 
 
-        item = int(input("enter item: "))
+        item = askUser("Selection: ")
+        while item > len(ingredients[cat])-1:
+            print(f"\n{ingredients[cat]['cat'].title()}")
+            for key in ingredients[cat]:
+                if key != "cat":
+                    print(f"{key} - {ingredients[cat][key].title()}")
+            item = askUser("""\nYou will need to enter only numbers beside the options.
+Selection: """)
 
         userIngredients.append(ingredients[cat][item])
 
-        cont = int(input("""Would you like to add more?
+        cont = askUser("""Would you like to add more?
 1 - YES
 2 - NO
-"""))
+Selection: """)
+        if cont > 2:
+            cont = askUser("""\nSorry, you will need to enter only numbers beside options.
+1 - YES
+2 - NO
+Selection: """)
 
+        userIngredients.sort()
     print("\nThe ingredients in your 'PANTRY' are:\n")
-    print(userIngredients)
+    for count,ingredient in enumerate(userIngredients,1):
+        print(f"{count}. {ingredient.title()}")
     return userIngredients
+
+
+def check():
+    print("For ")
 
 
 

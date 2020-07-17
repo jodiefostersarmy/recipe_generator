@@ -4,8 +4,8 @@ from foodList import ingredients
 from functions import select_items
 
 
-functions.greeting()
 
+functions.greeting()
 
 functions.hasIngredients()
 
@@ -14,11 +14,6 @@ functions.hasIngredients()
 
 
 
-
-# step2 = input("""\nIs this correct?
-# 1. YES
-# 2. NO
-# """)
 
 
 # #FIRST ROUND: Correct Ingredients
