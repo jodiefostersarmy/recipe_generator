@@ -7,34 +7,13 @@ from functions import select_items
 functions.greeting()
 
 
-# begin = functions.askUser("""1. I have some ingredients to use.
-# 2. Let me see the full list!
-# """)
-
-# if begin == 1:
-#     print("\nGreat, please select the right category of food group below using the numbers to add items to your 'PANTRY' list.\n")
-# else:
-#     print(recipes.recipes.sort())
+functions.hasIngredients()
 
 
 
-select_items()
 
 
 
-# how_many_ingredients = functions.askUser("\nPlease input the number beside the category you would like to use\n")
-
-# while how_many_ingredients < 3:
-#     print("You must have at least 3 or more ingredients for this guide to be beneficial.\n")
-#     how_many_ingredients = functions.askUser("How many ingredients in your pantry would you like to use?\n")
-
-
-# functions.get_ingredients(how_many_ingredients)
-# functions.user_ingredients.sort()
-
-# print(f"\nOkay, so your ingredients list contains:\n")
-# for ingredient in functions.user_ingredients:
-#     print(ingredient.title())
 
 # step2 = input("""\nIs this correct?
 # 1. YES

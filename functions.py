@@ -33,10 +33,6 @@ We recommend that you provide the application with at least 3 ingredients to
 maximise its benefit.
 
 If you need any help, or more instructions, call the help flag with --help
-
-
-To find the best recipes for your dietary preference, we will need to add a few ingredients you have on hand.
-Or, alternatively you can also browse the full list of recipes we have in the database.
 """)
 
 
@@ -50,18 +46,46 @@ def askUser(prompt):
     return num
 
 
+
+
+
+
+
+def hasIngredients():
+    print("""To find the best recipes for your dietary preference, we will need to add a few ingredients you have on hand.
+
+Or, alternatively you can also browse the full list of recipes we have in the database.""")
+    yes_or_no = askUser("""\nPlease select what you would like to do:
+
+    1. I have ingredients to use.
+    2. Let me see the full recipe list!
+
+Selection: """)
+    while yes_or_no > 2:
+        yes_or_no = askUser("""Sorry, you will need to enter only numbers beside options.
+        
+    1. I have ingredients to use.
+    2. Let me see the full recipe list!
+
+Selection: """)
+    if yes_or_no == 1:
+        return select_items()
+    if yes_or_no == 2:
+        return fullRecipeList()
+
+
+
+
 def select_items():
     userIngredients = []
     cont = 1
 
     while cont == 1:
-
+        print("")
         print('{:*^40}'.format('Select food category'))
         print("")
         for key in ingredients:
             print('{:>14}'.format(f"{key} -  ") + '{:<0}'.format(ingredients[key]['cat'].title()))
-        # for key in ingredients:
-        #         print(f"{key} - {ingredients[key]['cat'].title()}")
         
 
         cat = int(input("\nEnter category number: "))
@@ -90,4 +114,6 @@ def select_items():
     return userIngredients
 
 
-#two lists, check if these words are in the other list
+
+def fullRecipeList():
+    print("FULL RECIPE LIST")
