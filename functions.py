@@ -111,8 +111,8 @@ def select_items():
 Selection: """)
 
         userIngredients.append(ingredients[cat][item])
-
-        cont = askUser("""Would you like to add more?
+        cprint('{:*^40}'.format(f'You just added {ingredients[cat][item].title()}.'), 'blue', 'on_white')
+        cont = askUser(f"""\nWould you like to add something else?
 1 - YES
 2 - NO
 Selection: """)
@@ -135,10 +135,32 @@ Selection: """)
 
 
 def check():
-    checking = askUser("""Is this correct?
-1 - Yes
-2 -No
+    checking = askUser("""\nIs this correct?
+1 - YES
+2 - NO
+Selection: """)
+    if checking == 1:
+        diet = askUser("""Are you following any of the diets listed below?
+1 - Whole 30
+2 - Vegetarian
+3 - Plant-based
 """)
+    else:
+        add_or_remove = askUser("""Please select the best option below:
+1 - ADD INGREDIENT
+2 - REMOVE INGREDIENT
+""")
+        if add_or_remove == 1:
+            return select_items()
+        elif add_or_remove == 2:
+            for count,ingredient in enumerate(userIngredients,1):
+                print(f"{count} - {ingredient.title()}")
+            remove = askUser(f"""Which ingredient do you want to remove from your list?
+Type the corresponding number below:
+
+Selection: """)
+            del userIngredients[remove]
+            print(userIngredients)
 
 
 
