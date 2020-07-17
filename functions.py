@@ -76,9 +76,9 @@ Selection: """)
 
 
 
-
+userIngredients = []
 def select_items():
-    userIngredients = []
+    # userIngredients = []
     cont = 1
 
     while cont == 1:
@@ -140,27 +140,34 @@ def check():
 2 - NO
 Selection: """)
     if checking == 1:
-        diet = askUser("""Are you following any of the diets listed below?
+        diet = askUser("""\nAre you following any of the diets listed below?
 1 - Whole 30
 2 - Vegetarian
 3 - Plant-based
-""")
+Selection: """)
     else:
-        add_or_remove = askUser("""Please select the best option below:
+        add_or_remove = askUser("""\nPlease select the best option below:
 1 - ADD INGREDIENT
 2 - REMOVE INGREDIENT
-""")
+Selection: """)
         if add_or_remove == 1:
             return select_items()
         elif add_or_remove == 2:
             for count,ingredient in enumerate(userIngredients,1):
                 print(f"{count} - {ingredient.title()}")
-            remove = askUser(f"""Which ingredient do you want to remove from your list?
+            remove = askUser(f"""\nWhich ingredient do you want to remove from your list?
 Type the corresponding number below:
 
 Selection: """)
-            del userIngredients[remove]
-            print(userIngredients)
+            del userIngredients[remove-1]
+
+            cprint('{:*^40}'.format(f"Your 'PANTRY' list"), 'blue', 'on_white')
+
+            if len(userIngredients) > 0:
+                for count,ingredient in enumerate(userIngredients,1):
+                    print(f"{count} - {ingredient.title()}")
+            else:
+                cprint("You have no items in your PANTRY\n", 'white', 'on_red')
 
 
 
