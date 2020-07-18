@@ -10,10 +10,14 @@ from termcolor import colored, cprint
 if "--help" in sys.argv:
     print("""HOW TO NAVIGATE PANTRY:
 
-Each ingredient category will be provided with an accompanying number beside it.
-Please enter the integer beside your desired option and hit ENTER/RETURN to proceed.
+1,2,3,etc           Each ingredient category will be provided
+                    with an accompanying number beside it.
+                    Please enter the integer beside your desired 
+                    option and hit ENTER/RETURN to proceed.
+                    You will be prompted with messages thereafter
+                    to assist in the recipe selection.
 
-You will be prompted with messages thereafter to assist in the recipe selection.
+ctrl + c            This will stop the program at any point.
 """)
 
 else:
@@ -21,7 +25,3 @@ else:
     functions.hasIngredients()
     functions.endFunction()
 
-
-
-#create goodbye function
-# do you want to look for another recipe?

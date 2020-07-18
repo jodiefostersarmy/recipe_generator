@@ -182,7 +182,6 @@ Selection: """)
         if add_or_remove == 1:
             return select_items()
         elif add_or_remove == 2:
-
             print(f"""\nWhich ingredient do you want to remove from your list?
 Type the corresponding number below:\n""")
             for count,ingredient in enumerate(userIngredients,1):
@@ -195,10 +194,11 @@ Type the corresponding number below:\n""")
             if len(userIngredients) > 0:
                 for count,ingredient in enumerate(userIngredients,1):
                     print(f"{count} -  {ingredient.title()}")
+                return check()
             
             else:
                 cprint("You have no items in your PANTRY\n", 'white', 'on_red')
-
+                return check()
 
 
 
@@ -213,6 +213,8 @@ def fullRecipeList():
     for count,recipe in enumerate(recipes.recipes, 1):
         print(f"{count} - {recipe['name'].title()}")
     print("")
+
+
 
 
 
