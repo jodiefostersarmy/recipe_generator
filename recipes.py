@@ -2,10 +2,16 @@ recipes = [
     {
         "name": "roasted rainbow potatoes",
         "diet": [1, 3],
-        "ingredients": ["sweet potato", "red baby potatoes",
-"gold baby potatoes", "avocado oil",
-"salt", "black pepper", "scallion",
-"parsley", "lime"]
+        "ingredients": [
+            "sweet potato", 
+            "red baby potatoes",
+            "gold baby potatoes", 
+            "avocado oil",
+            "salt",
+            "black pepper",
+            "scallion",
+            "parsley",
+            "lime"]
     },
     {
         "name": "smoked tempeh BLT",
