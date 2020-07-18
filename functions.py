@@ -219,7 +219,7 @@ def fullRecipeList():
 
 
 def endFunction():
-    print("\nThanks for using PANTRY!\n")
+    cprint('{:*^40}'.format('Thanks for using PANTRY!'), 'blue', 'on_white')
     endFunc = askUser("""1 - I want to see what else I can make!
 2 - I'm done with this.
 
