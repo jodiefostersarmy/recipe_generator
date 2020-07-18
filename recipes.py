@@ -136,25 +136,48 @@ recipes = [
     {
         "name": "Taco Stuffed Sweet Potatoes",
         "diet": [1],
-        "ingredients": ["sweet potato", "beef",
-"salt", "black pepper", "garlic powder",
-"onion powder", "smoked paprika", "ground cumin",
-"red pepper flakes","cherry tomato", "avocado", "scallion", "coriander"]
+        "ingredients": [
+            "sweet potato",
+            "beef",
+            "salt",
+            "black pepper",
+            "garlic powder",
+            "onion powder",
+            "smoked paprika",
+            "ground cumin",
+            "red pepper flakes",
+            "cherry tomato",
+            "avocado",
+            "scallion",
+            "coriander"
+            ]
     },
 
     {
         "name": "Thai Red Beef Curry",
         "diet": [1],
-        "ingredients": ["beef", "thai red curry paste",
-"beef bone broth", "turmeric powder", "coconut cream", "kaffir lime leaf", "salt"]
+        "ingredients": [
+            "beef",
+            "thai red curry paste",
+            "beef bone broth",
+            "turmeric powder",
+            "coconut cream",
+            "kaffir lime leaf",
+            "salt"
+            ]
     },
 
     {
         "name": "Baked Sweet Potato with Arugula, Smoked Salmon and Poached Eggs",
         "diet": [1],
-        "ingredients": ["sweet potato", "arugula",
-"smoked salmon", "eggs",
-"white vinegar", "salt"]
+        "ingredients": [
+            "sweet potato",
+            "arugula",
+            "smoked salmon",
+            "eggs",
+            "white vinegar",
+            "salt"
+            ]
     }
 
 ]
