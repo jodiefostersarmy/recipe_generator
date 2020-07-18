@@ -16,59 +16,121 @@ recipes = [
     {
         "name": "smoked tempeh BLT",
         "diet": [3, 2],
-        "ingredients": ["tamari",
-"maple syrup", "smoked paprika",
-"black pepper", "tempeh", "whole-wheat bread",
-"mayonnaise", "heirloom tomato",
-"romaine lettuce"]
+        "ingredients": [
+            "tamari",
+            "maple syrup",
+            "smoked paprika",
+            "black pepper",
+            "tempeh",
+            "whole-wheat bread",
+            "mayonnaise",
+            "heirloom tomato",
+            "romaine lettuce"
+            ]
     },
     {
         "name": "Basil-Ricotta Ravioli with Spinach",
         "diet": [2],
-        "ingredients": ["ricotta cheese",
-"parmesan cheese", "basil", "lemon", "black pepper", "salt",
-"wonton wrappers", "eggs", "olive oil", "garlic",
-"baby spinach", "lemon"]
+        "ingredients": [
+            "ricotta cheese",
+            "parmesan cheese",
+            "basil",
+            "lemon",
+            "black pepper",
+            "salt",
+            "wonton wrappers",
+            "eggs",
+            "olive oil",
+            "garlic",
+            "baby spinach",
+            "lemon"
+            ]
     },
 
     {
         "name": "cheesy broccoli soup",
         "diet": [3],
-        "ingredients": ["olive oil",
-"onion", "garlic", "vegetable stock", "broccoli", "carrot",
-"raw cashews", "mustard powder", "smoked paprika",
-"nutritional yeast", "lemon", "almond milk", "cayenne pepper", "salt",
-"black pepper", "parsley"]
+        "ingredients": [
+            "olive oil",
+            "onion",
+            "garlic",
+            "vegetable stock",
+            "broccoli",
+            "carrot",
+            "raw cashews",
+            "mustard powder",
+            "smoked paprika",
+            "nutritional yeast",
+            "lemon",
+            "almond milk",
+            "cayenne pepper",
+            "salt",
+            "black pepper",
+            "parsley"
+            ]
     },
 
     {
         "name": "bacon cauliflower soup",
         "diet": [1],
-        "ingredients": ["bacon", "onion",
-"carrot", "celery", "coconut oil",
-"garlic", "bone broth", "chicken broth",
-"coconut milk", "cauliflower",
-"salt", "black pepper", "parsley"]
+        "ingredients": [
+            "bacon",
+            "onion",
+            "carrot",
+            "celery",
+            "coconut oil",
+            "garlic",
+            "bone broth",
+            "chicken broth",
+            "coconut milk",
+            "cauliflower",
+            "salt",
+            "black pepper",
+            "parsley"
+            ]
     },
 
     {
         "name": "coconut curry chicken meatballs",
         "diet": [1],
-        "ingredients": ["carrots",
-"red onion", "coriander", "lime",
-"basil", "coconut aminos", "soy sauce",
-"ground ginger", "garlic", "ground cumin",
-"red chili flakes", "salt", "black pepper", "chicken"]
+        "ingredients": [
+            "carrots",
+            "red onion",
+            "coriander",
+            "lime",
+            "basil",
+            "coconut aminos",
+            "soy sauce",
+            "ground ginger",
+            "garlic",
+            "ground cumin",
+            "red chili flakes",
+            "salt",
+            "black pepper",
+            "chicken"
+            ]
     },
     
     
     {
         "name": "Smashed Potatoes with Peas, Lemon & Herbed Aioli",
         "diet": [1],
-        "ingredients": ["gold baby potatoes", "avocado oil",
-"salt", "black pepper", "green peas", "scallion", "parsley", "mayonnaise", 
-"1 large egg yolk", "1 teaspoon sea salt", "½ teaspoon black pepper",
-"lemon", "scallion", "parsley"]
+        "ingredients": [
+            "gold baby potatoes",
+            "avocado oil",
+            "salt",
+            "black pepper",
+            "green peas",
+            "scallion",
+            "parsley",
+            "mayonnaise", 
+            "eggs",
+            "salt",
+            "black pepper",
+            "lemon",
+            "scallion",
+            "parsley"
+            ]
     },
 
     {
