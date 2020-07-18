@@ -1,9 +1,14 @@
+import sys
 import recipes
 from foodList import ingredients
 from termcolor import colored, cprint
 
+print(sys.argv)
+
+
+
 def greeting():
-    cprint("""
+    print("""
                                  d8P                     
                               d888888P                   
 ?88,.d88b, d888b8b    88bd88b   ?88'    88bd88b?88   d8P 
@@ -14,27 +19,24 @@ def greeting():
  d88                                                 ,d8P
  ?8P                                              `?888P' 
  ========================================================
-""", 'white')
+""")
 
-    cprint("""This application will provide you with suggested recipes for diets 
+    print("""This application will provide you with suggested recipes for diets 
 that follow the Whole30, vegetarian or plant-based diets based on the
 ingredients that you have in your fridge and pantry.
 
 We aim to match the recipes closest to the ingredients that you already 
-have on hand, and provide you with a quick and easy way to prepare a 
-healthy and tasty meal.
+have on hand, and provide you with ideas for healthy and tasty meal.
 
 We begin by asking you everything that you have in your pantry that you 
 would like to use, then once we have all the ingredients, we will provide 
 you with a selection of recipes across the diets mentioned above.
-You will be able to select the best fitting option based on taste, cook time
-and diet.
-
-We recommend that you provide the application with at least 3 ingredients to 
-maximise its benefit.
 
 If you need any help, or more instructions, call the help flag with --help
 """, 'white')
+
+
+
 
 
 def askUser(prompt):
@@ -76,7 +78,18 @@ Selection: """)
 
 
 
+
+
+
+
 userIngredients = []
+
+
+
+
+
+
+
 def select_items():
     # userIngredients = []
     cont = 1
@@ -126,16 +139,21 @@ Selection: """)
     
     # if cont == 2:
 
+    cprint("\nThe ingredients in your 'PANTRY' are:\n", 'blue','on_white')
 
-    print("\nThe ingredients in your 'PANTRY' are:\n")
     for count,ingredient in enumerate(userIngredients,1):
         print(f"{count}. {ingredient.title()}")
     
     return check()
 
 
+
+
+
+
+
 def check():
-    checking = askUser("""\nIs this correct?
+    checking = askUser("""\nAre you happy with these ingredients?
 1 - YES
 2 - NO
 Selection: """)
@@ -144,32 +162,66 @@ Selection: """)
 1 - Whole 30
 2 - Vegetarian
 3 - Plant-based
+4 - None
 Selection: """)
+
+        selectedRecipes = []
+        for recipe in recipes.recipes:
+            if diet in recipe["diet"] or diet == 4:
+                for ingredient in userIngredients:
+                    if ingredient in recipe["ingredients"]:
+                        selectedRecipes.append(recipe["name"])
+                        break
+        
+        
+        if len(selectedRecipes) == 0:
+                cprint(f"\nSorry, there are no recipes with those ingredients for the {recipes.diets[diet].title()} diet.\n", 'white', 'on_red')
+                return check()
+        else:
+            cprint('{:*^40}'.format('YOUR RECIPES'), 'blue', 'on_white')
+            print("")
+            for recipe in selectedRecipes:
+                cprint(recipe.title(), 'white', 'on_red')
+                print("")
+
     else:
-        add_or_remove = askUser("""\nPlease select the best option below:
+        print("""\nPlease select the best option below:
+
 1 - ADD INGREDIENT
-2 - REMOVE INGREDIENT
-Selection: """)
+2 - REMOVE INGREDIENT""")
+        add_or_remove = askUser("Selection: ")
         if add_or_remove == 1:
             return select_items()
         elif add_or_remove == 2:
+
+            print(f"""\nWhich ingredient do you want to remove from your list?
+Type the corresponding number below:\n""")
             for count,ingredient in enumerate(userIngredients,1):
                 print(f"{count} - {ingredient.title()}")
-            remove = askUser(f"""\nWhich ingredient do you want to remove from your list?
-Type the corresponding number below:
-
-Selection: """)
+            remove = askUser("Selection: ")
             del userIngredients[remove-1]
 
             cprint('{:*^40}'.format(f"Your 'PANTRY' list"), 'blue', 'on_white')
 
             if len(userIngredients) > 0:
                 for count,ingredient in enumerate(userIngredients,1):
-                    print(f"{count} - {ingredient.title()}")
+                    print(f"{count} -  {ingredient.title()}")
+            
             else:
                 cprint("You have no items in your PANTRY\n", 'white', 'on_red')
 
 
 
+
+
+
+
+
 def fullRecipeList():
-    print("FULL RECIPE LIST")
+    print("")
+    cprint('{:*^40}'.format(f'PANTRY Full Recipe List'), 'blue', 'on_white')
+    print("")
+    for count,recipe in enumerate(recipes.recipes, 1):
+        print(f"{count} - {recipe['name'].title()}")
+    print("")
+    

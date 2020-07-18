@@ -16,13 +16,21 @@ recipes = [
     }
 ]
 
-ingredient = "pepperoni"
+# ingredient = "pepperoni"
+ingredient_lst = ["pepperoni", "tortilla"]
 chosen_recipes = []
+
+# for recipe in recipes:
+#     if recipe["diet"] == "whole 30":
+#         if ingredient in recipe["ingredients"]:
+#             chosen_recipes.append(recipe["name"])
+
 
 for recipe in recipes:
     if recipe["diet"] == "whole 30":
-        if ingredient in recipe["ingredients"]:
-            chosen_recipes.append(recipe["name"])
+        for ingredient in ingredient_lst:
+            if ingredient in recipe["ingredients"]:
+                chosen_recipes.append(recipe["name"])
 
 print(chosen_recipes)
 

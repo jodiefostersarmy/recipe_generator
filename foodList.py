@@ -2,11 +2,10 @@ ingredients = {
         1: {
             "cat": "animal products", 
             1: "smoked salmon", 
-            2: "egg/s", 
-            3: "beef - steak", 
-            4: "beef - ground", 
-            5: "chicken - ground",
-            6: "bacon"
+            2: "eggs", 
+            3: "beef", 
+            4: "chicken",
+            5: "bacon"
         },
 
         2 : { 
@@ -24,21 +23,21 @@ ingredients = {
 
         4: {
             "cat": "herbs and spices", 
-            1: "salt - sea", 
-            2: "black pepper - cracked", 
+            1: "salt", 
+            2: "black pepper", 
             3: "kaffir lime leaf", 
-            4: "turmeric - powder",
+            4: "turmeric powder",
             5: "sugar",
-            6: "pepper flakes - red", 
-            7:"paprika powder - smoked", 
-            8: "cumin - ground",
-            9: "onion powder - dried", 
-            10: "garlic powder - dried", 
+            6: "red pepper flakes", 
+            7: "smoked paprika powder", 
+            8: "ground cumin",
+            9: "onion powder", 
+            10: "garlic powder", 
             11: "basil", 
-            12: "coriander/cilantro",
+            12: "coriander",
             13: "parsley", 
-            14: "pepper - cayenne",
-            15: "mustard - powder"
+            14: "cayenne pepper",
+            15: "mustard powder"
         },
 
         5: {
@@ -67,7 +66,7 @@ ingredients = {
         7: {
             "cat": "nuts and toppings", 
             1: "nutritional yeast", 
-            2: "cashews - raw",
+            2: "raw cashews",
             3: "almonds"
         },
 
@@ -77,32 +76,32 @@ ingredients = {
             2: "tamari", 
             3: "maple syrup", 
             4: "mayonnaise", 
-            5: "olive oil - extra virgin",
+            5: "olive oil",
             6: "coconut oil", 
             7: "ghee", 
             8: "thai red curry paste", 
             9: "coconut aminos",
-            10 :"soy sauce"
+            10: "soy sauce"
         },
 
         9: {
             "cat": "vegetables", 
             1: "sweet potato", 
-            2: "potatoes - red baby",
-            3: "potatoes - gold baby", 
+            2: "red baby potatoes",
+            3: "gold baby potatoes", 
             4: "scallion", 
-            5: "tomato - heirloom",
+            5: "heirloom tomato",
             6: "romaine lettuce", 
             7: "garlic", 
             8: "baby spinach",
-            9: "onion - brown", 
+            9: "onion", 
             10: "broccoli", 
             11: "carrot", 
             12: "celery", 
             13: "cauliflower",
-            14: "onion - red", 
-            15: "green peas - frozen", 
-            16: "tomato - cherry", 
+            14: "red onion", 
+            15: "green peas", 
+            16: "cherry tomato", 
             17: "arugula" 
             }, 
         }
