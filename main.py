@@ -8,13 +8,20 @@ from functions import select_items
 from termcolor import colored, cprint
 
 if "--help" in sys.argv:
-    print("""How to use PANTRY:
-Each ingredient category will be provided with an accompanying number
+    print("""HOW TO NAVIGATE PANTRY:
+
+Each ingredient category will be provided with an accompanying number beside it.
+Please enter the integer beside your desired option and hit ENTER/RETURN to proceed.
+
+You will be prompted with messages thereafter to assist in the recipe selection.
 """)
 
-functions.greeting()
+else:
+    functions.greeting()
+    functions.hasIngredients()
+    functions.endFunction()
 
-functions.hasIngredients()
+
 
 #create goodbye function
 # do you want to look for another recipe?

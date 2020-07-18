@@ -31,7 +31,7 @@ would like to use, then once we have all the ingredients, we will provide
 you with a selection of recipes across the diets mentioned above.
 
 If you need any help, or more instructions, call the help flag with --help
-""", 'white')
+""")
 
 
 
@@ -213,4 +213,16 @@ def fullRecipeList():
     for count,recipe in enumerate(recipes.recipes, 1):
         print(f"{count} - {recipe['name'].title()}")
     print("")
-    
+
+
+
+def endFunction():
+    print("\nThanks for using PANTRY!\n")
+    endFunc = askUser("""1 - I want to see what else I can make!
+2 - I'm done with this.
+
+Selection: """)
+    if endFunc == 1:
+        return hasIngredients()
+    else:
+        print("See ya!")    
