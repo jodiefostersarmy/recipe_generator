@@ -1,9 +1,7 @@
-import sys
 import recipes
 from foodList import ingredients
 from termcolor import colored, cprint
 
-print(sys.argv)
 
 
 
@@ -85,13 +83,7 @@ Selection: """)
 userIngredients = []
 
 
-
-
-
-
-
 def select_items():
-    # userIngredients = []
     cont = 1
 
     while cont == 1:
@@ -107,8 +99,6 @@ def select_items():
         print(ingredients[cat]["cat"].title())
         
         for key in ingredients[cat]:
-            # Dont print if they key is "cat"
-            # Cat is not an ingredient, it is the name of the category
             if key != "cat":
                 print(f" {key} - {ingredients[cat][key].title()}")  
             
@@ -137,7 +127,6 @@ Selection: """)
 
         userIngredients.sort()
     
-    # if cont == 2:
 
     cprint("\nThe ingredients in your 'PANTRY' are:\n", 'blue','on_white')
 

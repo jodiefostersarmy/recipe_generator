@@ -7,6 +7,10 @@ from foodList import ingredients
 from functions import select_items
 from termcolor import colored, cprint
 
+if "--help" in sys.argv:
+    print("""How to use PANTRY:
+Each ingredient category will be provided with an accompanying number
+""")
 
 functions.greeting()
 
