@@ -172,7 +172,6 @@ Selection: """)
             for recipe in selectedRecipes:
                 cprint(recipe.title(), 'white', 'on_red')
                 print("")
-
     else:
         print("""\nPlease select the best option below:
 
